@@ -1,7 +1,7 @@
 import cv2 as cv
 from img2bin import img2bin
 from count import Count
-from count import CNT
+from colorDivision import CNT
 def main():
     img = cv.imread("images/123.png")
     sbl = img2bin.Sobel(img)

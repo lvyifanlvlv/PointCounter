@@ -5,7 +5,7 @@ np.set_printoptions(threshold=10000000000)
 class img2bin:
     #背景平滑
     def Sobel(img):
-        img = cv.fastNlMeansDenoisingColored(img,None,4,4,7,21)
+        img = cv.fastNlMeansDenoisingColored(img,None,6.5,6.5,7,21)
         #利用Sobel算子进行过滤
         x=cv.Sobel(img,cv.CV_16S,1,0)
         y=cv.Sobel(img,cv.CV_16S,0,1)
