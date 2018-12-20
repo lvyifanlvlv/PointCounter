@@ -32,12 +32,12 @@ class Count:
                     union(i*rows+j,i*rows+rows+j+1)
         st=set()
         st.clear()
-
+        fields=np.zeros((rows,cols))
         for i in range(rows):
             for j in range(cols):
                 if img[i,j]==255:
                     continue
                 else:
                     st.add("%s"%getFa(i*rows+j))
-        return len(st)
-
+                    fields[i,j]=getFa(i*rows+j)
+        return len(st),st,fields

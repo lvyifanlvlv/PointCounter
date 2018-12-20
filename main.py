@@ -7,9 +7,14 @@ def main():
     sbl = img2bin.Sobel(img)
     imgCut = img2bin.cutBackground(sbl)
     imgBin = img2bin.SetGrey(imgCut)
-    count=Count.counter(imgBin)
-    print("hhahah")
+    count,fathers,fields=Count.counter(imgBin)
+    #count:number of points
+    #fathers:fathers of every pixels in each point
+    #fields:an array size of(rows*cols) in which fathers are marked
+    print("The number of points:")
     print(count)
+    print("The position of fathers:")
+    print(fathers)
     cv.namedWindow("Image")
     cv.imshow("Image", imgBin)
 
