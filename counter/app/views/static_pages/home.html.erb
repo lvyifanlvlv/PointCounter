@@ -1,0 +1,37 @@
+<%provide(:title,"Home")%>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="counter_form">
+        <%= render 'shared/counter_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Uploaded pictues</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+<div class="center jumbotron">
+  <h1>Welcome to the Point Counter</h1>
+
+  <h2>
+    This is the home page for the
+    <a href="http://www.railstutorial.org/">Point Counter</a>
+    application.
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("logo.png", alt: "Rails logo"),
+            'http://rubyonrails.org/' %>
+
+<%#= image_tag("kitten.jpg", alt: "Kitten") %>
+<% end %>
+
+
