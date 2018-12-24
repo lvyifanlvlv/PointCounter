@@ -1,9 +1,8 @@
 import cv2 as cv
-from img2bin import img2bin
-from count import Count
-from colorDivision import CNT
-def process():
-    img = cv.imread("images/123.png")
+from jishu.img2bin import img2bin
+from jishu.count import Count
+from jishu.colorDivision import CNT
+def process(img):
     sbl = img2bin.Sobel(img)
     imgCut = img2bin.cutBackground(sbl)
     imgBin = img2bin.SetGrey(imgCut)

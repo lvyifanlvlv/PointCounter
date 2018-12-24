@@ -1,1 +1,0 @@
-# delete the records regularly

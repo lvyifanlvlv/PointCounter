@@ -2,15 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95965557-e531-4443-84f8-c68914758f0b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/clear.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dbReading.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/entrance.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mainprocess.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/threadHandler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhuanhuan/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zhuanhuan/entrance.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pointCounter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pointCounter.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clear.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/colorDivision.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/colorDivision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/count.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/count.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/development.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181219105755_create_users.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181219130758_add_index_to_users_email.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181219131814_add_password_digest_to_users.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181221134759_add_reset_to.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181222083509_add_reset_to_users.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181223080724_create_counters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181223123103_add_picture_to_counters.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/schema.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/seeds.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/counter/db/test.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbReading.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entrance.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/entrance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img2bin.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/img2bin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/mainprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/threadHandler.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +34,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PointCounter$img2bin.coverage" NAME="img2bin Coverage Results" MODIFIED="1545315034000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PointCounter_master$123.coverage" NAME="123 Coverage Results" MODIFIED="1545147188999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PointCounter_master$main.coverage" NAME="main Coverage Results" MODIFIED="1545191335606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PointCounter$main.coverage" NAME="main Coverage Results" MODIFIED="1545315969549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$entrance__1_.coverage" NAME="entrance (1) Coverage Results" MODIFIED="1545649185579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jishu" />
+    <SUITE FILE_PATH="coverage/PointCounter$data.coverage" NAME="data Coverage Results" MODIFIED="1545637890450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$dboperation.coverage" NAME="dboperation Coverage Results" MODIFIED="1545632164615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PointCounter$123.coverage" NAME="123 Coverage Results" MODIFIED="1545307257066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PointCounter$threadHandler.coverage" NAME="threadHandler Coverage Results" MODIFIED="1545617060361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$img2bin.coverage" NAME="img2bin Coverage Results" MODIFIED="1545315034000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PointCounter$count.coverage" NAME="count Coverage Results" MODIFIED="1545312559157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter_master$123.coverage" NAME="123 Coverage Results" MODIFIED="1545147188999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$entrance.coverage" NAME="entrance Coverage Results" MODIFIED="1545650380666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zhuanhuan" />
+    <SUITE FILE_PATH="coverage/PointCounter$threadHandler.coverage" NAME="threadHandler Coverage Results" MODIFIED="1545617060361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1398433981">
@@ -97,34 +116,45 @@
     <session id="607733820">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1584" />
+          <entry key="html" value="13" />
+          <entry key="json" value="139" />
+          <entry key="py" value="4718" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1584" />
+          <entry key="HTML" value="13" />
+          <entry key="JSON" value="139" />
+          <entry key="Python" value="4709" />
+          <entry key="SQL" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="html" value="1" />
           <entry key="jpg" value="3" />
+          <entry key="json" value="3" />
           <entry key="png" value="3" />
-          <entry key="py" value="6" />
+          <entry key="py" value="17" />
           <entry key="tif" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="1" />
           <entry key="Image" value="10" />
-          <entry key="Python" value="6" />
+          <entry key="JSON" value="3" />
+          <entry key="Python" value="17" />
         </counts>
       </usages-collector>
     </session>
@@ -132,31 +162,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/count.py">
+        <entry file="file://$PROJECT_DIR$/jishu/entrance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1344">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="115">
+              <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#33#70#0" expanded="true" />
+                <marker date="1545649183723" expanded="true" signature="110:111" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/colorDivision.py">
+        <entry file="file://$PROJECT_DIR$/jishu/mainprocess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/img2bin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="161">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -165,62 +187,51 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mainprocess.py">
+        <entry file="file://$PROJECT_DIR$/zhuanhuan/entrance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="322">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
+                <marker date="1545650612960" expanded="true" signature="110:119" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entrance.py">
+        <entry file="file://$PROJECT_DIR$/myjson/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="32" selection-start-column="32" selection-end-column="32" />
+            <state relative-caret-position="115">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clear.py">
+        <entry file="file://$PROJECT_DIR$/shujuku/dboperation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/threadHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="162">
+              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#28#42#0" expanded="true" />
+                <marker date="1545639484880" expanded="true" signature="4884:4885" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dbReading.py">
+        <entry file="file://$PROJECT_DIR$/zhuanhuan/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="230">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
-                <marker date="1545618165317" expanded="true" signature="45:50" ph="..." />
+                <marker date="1545650380573" expanded="true" signature="23:24" ph="..." />
+                <marker date="1545650380573" expanded="true" signature="227:257" ph="..." />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/datu.tif">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -228,9 +239,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>STUDENT</find>
+      <find>oncl</find>
+      <find>searchKey</find>
+      <find>searchU</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -242,12 +263,25 @@
         <option value="$PROJECT_DIR$/count.py" />
         <option value="$PROJECT_DIR$/colorDivision.py" />
         <option value="$PROJECT_DIR$/img2bin.py" />
-        <option value="$PROJECT_DIR$/threadHandler.py" />
-        <option value="$PROJECT_DIR$/dbReading.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/entrance.py" />
         <option value="$PROJECT_DIR$/clear.py" />
         <option value="$PROJECT_DIR$/mainprocess.py" />
+        <option value="$PROJECT_DIR$/dbReading.py" />
+        <option value="$PROJECT_DIR$/html.html" />
+        <option value="$PROJECT_DIR$/PAJ.py" />
+        <option value="$PROJECT_DIR$/data.py" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/dboperation.py" />
+        <option value="$PROJECT_DIR$/convert.py" />
+        <option value="$PROJECT_DIR$/shujuku/dboperation.py" />
+        <option value="$PROJECT_DIR$/json/package.json" />
+        <option value="$PROJECT_DIR$/jishu/mainprocess.py" />
+        <option value="$PROJECT_DIR$/zhuanhuan/convert.py" />
+        <option value="$PROJECT_DIR$/threadHandler.py" />
+        <option value="$PROJECT_DIR$/jishu/entrance.py" />
+        <option value="$PROJECT_DIR$/zhuanhuan/data.py" />
+        <option value="$PROJECT_DIR$/zhuanhuan/entrance.py" />
       </list>
     </option>
   </component>
@@ -257,11 +291,33 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-305" />
-    <option name="y" value="95" />
-    <option name="width" value="1935" />
-    <option name="height" value="1045" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/counter/package.json" />
+      <path value="$PROJECT_DIR$/myjson/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyPep8Inspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -269,7 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,18 +335,43 @@
             <path>
               <item name="PointCounter" type="b2602c69:ProjectViewProjectNode" />
               <item name="PointCounter" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="jishu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PointCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PointCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="myjson" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PointCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PointCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="shujuku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PointCounter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PointCounter" type="462c0819:PsiDirectoryNode" />
+              <item name="zhuanhuan" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PointCounter\json" />
+      <recent name="E:\PointCounter\zhuanhuan" />
+      <recent name="E:\PointCounter\jishu" />
+      <recent name="E:\PointCounter\shujuku" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -305,8 +385,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.threadHandler">
-    <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.entrance">
+    <configuration name="data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointCounter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -319,7 +399,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/123.py" />
+      <option name="SCRIPT_NAME" value="E:\PointCounter\zhuanhuan\data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -328,7 +408,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="count" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="dboperation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointCounter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -341,7 +421,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/count.py" />
+      <option name="SCRIPT_NAME" value="E:\PointCounter\shujuku\dboperation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,7 +430,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="img2bin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="entrance (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointCounter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -358,12 +438,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jishu" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/img2bin.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jishu/entrance.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,7 +452,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="entrance" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointCounter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -380,12 +460,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/zhuanhuan" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhuanhuan/entrance.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -417,19 +497,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.main" />
-      <item itemvalue="Python.123" />
-      <item itemvalue="Python.count" />
-      <item itemvalue="Python.img2bin" />
       <item itemvalue="Python.threadHandler" />
+      <item itemvalue="Python.dboperation" />
+      <item itemvalue="Python.data" />
+      <item itemvalue="Python.entrance" />
+      <item itemvalue="Python.entrance (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.entrance" />
+        <item itemvalue="Python.entrance (1)" />
+        <item itemvalue="Python.data" />
+        <item itemvalue="Python.dboperation" />
         <item itemvalue="Python.threadHandler" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.img2bin" />
-        <item itemvalue="Python.count" />
-        <item itemvalue="Python.123" />
       </list>
     </recent_temporary>
   </component>
@@ -447,15 +527,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2764141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28820375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25436682" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25314686" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -518,26 +598,24 @@
     <entry file="file://$PROJECT_DIR$/images/001_09.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/count.py">
+    <entry file="file://$PROJECT_DIR$/main.py" />
+    <entry file="file://$PROJECT_DIR$/dbReading.py" />
+    <entry file="file://$PROJECT_DIR$/images/datu.tif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html.html" />
+    <entry file="file://$PROJECT_DIR$/PAJ.py" />
+    <entry file="file://$PROJECT_DIR$/clear.py" />
+    <entry file="file://$PROJECT_DIR$/jishu/colorDivision.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/colorDivision.py">
+    <entry file="file://$PROJECT_DIR$/jishu/img2bin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img2bin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="207">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
@@ -545,59 +623,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/datu.tif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbReading.py">
+    <entry file="file://$PROJECT_DIR$/jishu/count.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <marker date="1545618165317" expanded="true" signature="45:50" ph="..." />
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zhuanhuan/convert.py" />
+    <entry file="file://$PROJECT_DIR$/json/package.json" />
     <entry file="file://$PROJECT_DIR$/threadHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="253">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1545648321337" expanded="true" signature="40:41" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shujuku/dboperation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+          <folding>
+            <element signature="e#28#42#0" expanded="true" />
+            <marker date="1545639484880" expanded="true" signature="4884:4885" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jishu/entrance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding>
+            <element signature="e#33#70#0" expanded="true" />
+            <marker date="1545649183723" expanded="true" signature="110:111" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jishu/mainprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clear.py">
+    <entry file="file://$PROJECT_DIR$/myjson/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="115">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/entrance.py">
+    <entry file="file://$PROJECT_DIR$/zhuanhuan/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="230">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1545650380573" expanded="true" signature="23:24" ph="..." />
+            <marker date="1545650380573" expanded="true" signature="227:257" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainprocess.py">
+    <entry file="file://$PROJECT_DIR$/zhuanhuan/entrance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="322">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
+            <marker date="1545650612960" expanded="true" signature="110:119" ph="..." />
           </folding>
         </state>
       </provider>
