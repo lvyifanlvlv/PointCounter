@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def  setup
-    @base_title="Ruby on Rails Tutorial Sample App"    
+    @base_title="Point Counter App"    
   end
 
 
@@ -28,7 +28,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get contact" do
     get contact_path
     assert_response :success
-    assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
+    assert_select "title", "Contact | Point Counter App"
   end
 
 end

@@ -3,6 +3,7 @@
  	<%= counter.content %>
     <%= image_tag counter.picture.url if counter.picture? %>
   </span>
+  <br>
   <span class="delete">
     <% if current_user?(counter.user) %>
       <%= link_to "delete", counter, method: :delete,
