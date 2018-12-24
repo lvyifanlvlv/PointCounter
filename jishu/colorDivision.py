@@ -29,3 +29,4 @@ class CNT:
             count = count - 1
         print("The number of green dots in the figure is",G_cnt)
         print("The number of blue dots in the figure is",B_cnt)
+        return G_cnt,B_cnt

@@ -2,30 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95965557-e531-4443-84f8-c68914758f0b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/zhuanhuan/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zhuanhuan/entrance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pointCounter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pointCounter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shujuku/initDB.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clear.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/colorDivision.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/colorDivision.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/count.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/count.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/development.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181219105755_create_users.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181219130758_add_index_to_users_email.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181219131814_add_password_digest_to_users.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181221134759_add_reset_to.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181222083509_add_reset_to_users.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181223080724_create_counters.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/migrate/20181223123103_add_picture_to_counters.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/schema.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/seeds.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/counter/db/test.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbReading.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrance.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/entrance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img2bin.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/img2bin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/mainprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hongten.db" beforeDir="false" afterPath="$PROJECT_DIR$/hongten.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jishu/colorDivision.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/colorDivision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jishu/entrance.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/entrance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jishu/mainprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/jishu/mainprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myjson/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shujuku/dboperation.py" beforeDir="false" afterPath="$PROJECT_DIR$/shujuku/dboperation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/threadHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/threadHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhuanhuan/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhuanhuan/data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhuanhuan/entrance.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhuanhuan/entrance.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,17 +21,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/PointCounter_master$main.coverage" NAME="main Coverage Results" MODIFIED="1545191335606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PointCounter$main.coverage" NAME="main Coverage Results" MODIFIED="1545315969549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PointCounter$entrance__1_.coverage" NAME="entrance (1) Coverage Results" MODIFIED="1545649185579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jishu" />
-    <SUITE FILE_PATH="coverage/PointCounter$data.coverage" NAME="data Coverage Results" MODIFIED="1545637890450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PointCounter$dboperation.coverage" NAME="dboperation Coverage Results" MODIFIED="1545632164615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PointCounter$123.coverage" NAME="123 Coverage Results" MODIFIED="1545307257066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$entrance__1_.coverage" NAME="entrance (1) Coverage Results" MODIFIED="1545660818358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jishu" />
+    <SUITE FILE_PATH="coverage/PointCounter$dboperation.coverage" NAME="dboperation Coverage Results" MODIFIED="1545659575255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shujuku" />
     <SUITE FILE_PATH="coverage/PointCounter$img2bin.coverage" NAME="img2bin Coverage Results" MODIFIED="1545315034000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PointCounter$count.coverage" NAME="count Coverage Results" MODIFIED="1545312559157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$mainprocess.coverage" NAME="mainprocess Coverage Results" MODIFIED="1545658685382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jishu" />
+    <SUITE FILE_PATH="coverage/PointCounter_master$main.coverage" NAME="main Coverage Results" MODIFIED="1545191335606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$data.coverage" NAME="data Coverage Results" MODIFIED="1545637890450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$123.coverage" NAME="123 Coverage Results" MODIFIED="1545307257066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$initDB.coverage" NAME="initDB Coverage Results" MODIFIED="1545659629728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/shujuku" />
     <SUITE FILE_PATH="coverage/PointCounter_master$123.coverage" NAME="123 Coverage Results" MODIFIED="1545147188999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PointCounter$entrance.coverage" NAME="entrance Coverage Results" MODIFIED="1545650380666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zhuanhuan" />
-    <SUITE FILE_PATH="coverage/PointCounter$threadHandler.coverage" NAME="threadHandler Coverage Results" MODIFIED="1545617060361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PointCounter$entrance.coverage" NAME="entrance Coverage Results" MODIFIED="1545658690856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zhuanhuan" />
+    <SUITE FILE_PATH="coverage/PointCounter$threadHandler.coverage" NAME="threadHandler Coverage Results" MODIFIED="1545654957836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1398433981">
@@ -127,15 +116,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="13" />
-          <entry key="json" value="139" />
-          <entry key="py" value="4718" />
+          <entry key="json" value="168" />
+          <entry key="py" value="5708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="13" />
-          <entry key="JSON" value="139" />
-          <entry key="Python" value="4709" />
+          <entry key="JSON" value="168" />
+          <entry key="Python" value="5699" />
           <entry key="SQL" value="9" />
         </counts>
       </usages-collector>
@@ -143,9 +132,9 @@
         <counts>
           <entry key="html" value="1" />
           <entry key="jpg" value="3" />
-          <entry key="json" value="3" />
+          <entry key="json" value="8" />
           <entry key="png" value="3" />
-          <entry key="py" value="17" />
+          <entry key="py" value="25" />
           <entry key="tif" value="4" />
         </counts>
       </usages-collector>
@@ -153,57 +142,41 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="Image" value="10" />
-          <entry key="JSON" value="3" />
-          <entry key="Python" value="17" />
+          <entry key="JSON" value="8" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jishu/entrance.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding>
                 <element signature="e#33#70#0" expanded="true" />
-                <marker date="1545649183723" expanded="true" signature="110:111" ph="..." />
+                <marker date="1545654072724" expanded="true" signature="110:111" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jishu/mainprocess.py">
+        <entry file="file://E:/anaconda/envs/py37/Lib/json/decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zhuanhuan/entrance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-                <marker date="1545650612960" expanded="true" signature="110:119" ph="..." />
-              </folding>
+            <state relative-caret-position="278">
+              <caret line="354" selection-start-line="354" selection-end-line="354" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myjson/package.json">
+        <entry file="file://$PROJECT_DIR$/jishu/colorDivision.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="346">
+              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -211,12 +184,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shujuku/dboperation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="1649">
+              <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
               <folding>
                 <element signature="e#28#42#0" expanded="true" />
-                <marker date="1545639484880" expanded="true" signature="4884:4885" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shujuku/initDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -224,11 +205,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhuanhuan/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="69">
+              <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
               <folding>
-                <marker date="1545650380573" expanded="true" signature="23:24" ph="..." />
-                <marker date="1545650380573" expanded="true" signature="227:257" ph="..." />
+                <marker date="1545657683926" expanded="true" signature="23:24" ph="..." />
+                <marker date="1545657683926" expanded="true" signature="221:628" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myjson/receive.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myjson/return.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="90" selection-start-column="90" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jishu/mainprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhuanhuan/entrance.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-367">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+                <marker date="1545658764201" expanded="true" signature="180:189" ph="..." />
               </folding>
             </state>
           </provider>
@@ -239,8 +263,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package.json" />
         <option value="HTML File" />
+        <option value="package.json" />
         <option value="Python Script" />
       </list>
     </option>
@@ -251,6 +275,11 @@
       <find>oncl</find>
       <find>searchKey</find>
       <find>searchU</find>
+      <find>sq</find>
+      <find>fetchall_test()</find>
+      <find>get_conn</find>
+      <find>get_cursor</find>
+      <find>create_table</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -271,17 +300,21 @@
         <option value="$PROJECT_DIR$/html.html" />
         <option value="$PROJECT_DIR$/PAJ.py" />
         <option value="$PROJECT_DIR$/data.py" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/dboperation.py" />
         <option value="$PROJECT_DIR$/convert.py" />
-        <option value="$PROJECT_DIR$/shujuku/dboperation.py" />
         <option value="$PROJECT_DIR$/json/package.json" />
-        <option value="$PROJECT_DIR$/jishu/mainprocess.py" />
         <option value="$PROJECT_DIR$/zhuanhuan/convert.py" />
-        <option value="$PROJECT_DIR$/threadHandler.py" />
+        <option value="$PROJECT_DIR$/jishu/colorDivision.py" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/myjson/return.json" />
+        <option value="$PROJECT_DIR$/jishu/mainprocess.py" />
         <option value="$PROJECT_DIR$/jishu/entrance.py" />
+        <option value="$PROJECT_DIR$/threadHandler.py" />
         <option value="$PROJECT_DIR$/zhuanhuan/data.py" />
         <option value="$PROJECT_DIR$/zhuanhuan/entrance.py" />
+        <option value="$PROJECT_DIR$/shujuku/initDB.py" />
+        <option value="$PROJECT_DIR$/shujuku/dboperation.py" />
+        <option value="$PROJECT_DIR$/myjson/receive.json" />
       </list>
     </option>
   </component>
@@ -294,10 +327,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/counter/package.json" />
-      <path value="$PROJECT_DIR$/myjson/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
     <option name="width" value="978" />
     <option name="height" value="1050" />
@@ -363,10 +395,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PointCounter\myjson" />
       <recent name="E:\PointCounter\json" />
       <recent name="E:\PointCounter\zhuanhuan" />
       <recent name="E:\PointCounter\jishu" />
@@ -385,29 +419,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.entrance">
-    <configuration name="data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pointCounter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\PointCounter\zhuanhuan\data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.entrance (1)">
     <configuration name="dboperation" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointCounter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -416,12 +428,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shujuku" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\PointCounter\shujuku\dboperation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shujuku/dboperation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -474,7 +486,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="threadHandler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="initDB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointCounter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -482,12 +494,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/shujuku" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/threadHandler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/shujuku/initDB.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mainprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pointCounter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jishu" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jishu/mainprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -497,19 +531,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.threadHandler" />
-      <item itemvalue="Python.dboperation" />
-      <item itemvalue="Python.data" />
       <item itemvalue="Python.entrance" />
       <item itemvalue="Python.entrance (1)" />
+      <item itemvalue="Python.mainprocess" />
+      <item itemvalue="Python.dboperation" />
+      <item itemvalue="Python.initDB" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.entrance" />
         <item itemvalue="Python.entrance (1)" />
-        <item itemvalue="Python.data" />
+        <item itemvalue="Python.initDB" />
         <item itemvalue="Python.dboperation" />
-        <item itemvalue="Python.threadHandler" />
+        <item itemvalue="Python.entrance" />
+        <item itemvalue="Python.mainprocess" />
       </list>
     </recent_temporary>
   </component>
@@ -528,7 +562,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28820375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -552,6 +585,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28820375" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25314686" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986014" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33078602" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.32960895" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -606,19 +662,39 @@
     <entry file="file://$PROJECT_DIR$/html.html" />
     <entry file="file://$PROJECT_DIR$/PAJ.py" />
     <entry file="file://$PROJECT_DIR$/clear.py" />
-    <entry file="file://$PROJECT_DIR$/jishu/colorDivision.py">
+    <entry file="file://$PROJECT_DIR$/zhuanhuan/convert.py" />
+    <entry file="file://$PROJECT_DIR$/json/package.json" />
+    <entry file="file://$PROJECT_DIR$/myjson/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="161">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jishu/img2bin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="92">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/threadHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#73#89#0" expanded="true" />
+            <marker date="1545654957628" expanded="true" signature="864:865" ph="..." />
           </folding>
         </state>
       </provider>
@@ -626,83 +702,97 @@
     <entry file="file://$PROJECT_DIR$/jishu/count.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhuanhuan/convert.py" />
-    <entry file="file://$PROJECT_DIR$/json/package.json" />
-    <entry file="file://$PROJECT_DIR$/threadHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <marker date="1545648321337" expanded="true" signature="40:41" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shujuku/dboperation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="e#28#42#0" expanded="true" />
-            <marker date="1545639484880" expanded="true" signature="4884:4885" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jishu/entrance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding>
-            <element signature="e#33#70#0" expanded="true" />
-            <marker date="1545649183723" expanded="true" signature="110:111" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jishu/mainprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="323">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myjson/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhuanhuan/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <marker date="1545650380573" expanded="true" signature="23:24" ph="..." />
-            <marker date="1545650380573" expanded="true" signature="227:257" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zhuanhuan/entrance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="-367">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
-            <marker date="1545650612960" expanded="true" signature="110:119" ph="..." />
+            <marker date="1545658764201" expanded="true" signature="180:189" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhuanhuan/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding>
+            <marker date="1545657683926" expanded="true" signature="23:24" ph="..." />
+            <marker date="1545657683926" expanded="true" signature="221:628" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/anaconda/envs/py37/Lib/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="354" selection-start-line="354" selection-end-line="354" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myjson/return.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="90" selection-start-column="90" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shujuku/initDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jishu/colorDivision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shujuku/dboperation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+          <folding>
+            <element signature="e#28#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myjson/receive.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jishu/entrance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="e#33#70#0" expanded="true" />
+            <marker date="1545654072724" expanded="true" signature="110:111" ph="..." />
           </folding>
         </state>
       </provider>

@@ -14,7 +14,8 @@ def process(img):
     print(count)
     print("The position of fathers:")
     print(fathers)
-    CNT.cnt(fathers,img,fields,count)
+    G_num, B_num = CNT.cnt(fathers,img,fields,count)
+    return G_num,B_num
     cv.namedWindow("Image")
     cv.imshow("Image", imgBin)
 

@@ -51,17 +51,17 @@ def save(conn, sql, data):
     else:
         print('the [{}] is empty or equal None!'.format(sql))
 
-# def fetchall(conn, sql):
-#     '''查询所有数据'''
-#     if sql is not None and sql != '':
-#         cu = get_cursor(conn)
-#         cu.execute(sql)
-#         r = cu.fetchall()
-#         if len(r) > 0:
-#             for e in range(len(r)):
-#                 print(r[e])
-#     else:
-#         print('the [{}] is empty or equal None!'.format(sql))
+def fetchall(conn, sql):
+    '''查询所有数据'''
+    if sql is not None and sql != '':
+        cu = get_cursor(conn)
+        cu.execute(sql)
+        r = cu.fetchall()
+        if len(r) > 0:
+            for e in range(len(r)):
+                print(r[e])
+    else:
+        print('the [{}] is empty or equal None!'.format(sql))
 
 # def fetchone(conn, sql, data):
 #     '''查询一条数据'''
@@ -109,7 +109,7 @@ def save(conn, sql, data):
 #     conn = get_conn(DB_FILE_PATH)
 #     drop_table(conn, TABLE_NAME)
 
-def create_table_test():
+def create_table_test(path):
     '''创建数据库表测试'''
     create_table_sql = '''CREATE TABLE `student`(
                               `ID` char(20) PRIMARY KEY  NOT NULL,
@@ -122,22 +122,22 @@ def create_table_test():
                               `G_CNT` int(11) DEFAULT NULL,
                               `B_CNT` int(11) DEFAULT NULL
                           )'''
-    conn = get_conn(DB_FILE_PATH)
+    conn = get_conn(path)
     create_table(conn, create_table_sql)
 
-def save_test():
+def save_test(data):
     '''保存数据测试...'''
     save_sql = '''INSERT INTO student values (?, ?, ?, ?, ?, ?, ?, ?, ?)'''
-    data = [(1, 20181224, '张三', '第一小组', '粒子技术', 1, 0, 0, 0)]
-    conn = get_conn(DB_FILE_PATH)
+
+    conn = get_conn('E:\\PointCounter\\hongten.db')
     save(conn, save_sql, data)
     print('写入数据库表[student]成功!')
 
-# def fetchall_test():
-#     '''查询所有数据...'''
-#     fetchall_sql = '''SELECT * FROM student'''
-#     conn = get_conn(DB_FILE_PATH)
-#     fetchall(conn, fetchall_sql)
+def fetchall_test():
+    '''查询所有数据...'''
+    fetchall_sql = '''SELECT * FROM student'''
+    conn = get_conn('E:\\PointCounter\\hongten.db')
+    fetchall(conn, fetchall_sql)
 
 # def fetchone_test():
 #     '''查询一条数据...'''
@@ -153,27 +153,14 @@ def save_test():
 #     conn = get_conn(DB_FILE_PATH)
 #     update(conn, update_sql, data)
 
-def init():
-    '''初始化方法'''
-    # 数据库文件绝句路径
-    global DB_FILE_PATH
-    DB_FILE_PATH = 'E:\\PointCounter\\hongten.db'
-    # 数据库表名称
-    global TABLE_NAME
-    TABLE_NAME = 'student'
-    # 创建数据库表student
-    create_table_test()
-    # 向数据库表中插入数据
-    save_test()
-def main():
-    init()
-    # fetchall_test()
+def writeDB(a,b,c,d,e,f,g,h,i):
+    data = [(a,b,c,d,e,f,g,h,i)]
+    save_test(data)
+    fetchall_test()
     # fetchone_test()
     # update_test()
     # fetchall_test()
     # fetchall_test()
 
-if __name__ == '__main__':
-    main()
 
 
