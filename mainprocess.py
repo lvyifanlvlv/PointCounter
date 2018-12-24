@@ -2,7 +2,7 @@ import cv2 as cv
 from img2bin import img2bin
 from count import Count
 from colorDivision import CNT
-def main():
+def process():
     img = cv.imread("images/123.png")
     sbl = img2bin.Sobel(img)
     imgCut = img2bin.cutBackground(sbl)
@@ -24,6 +24,3 @@ def main():
     cv.waitKey(0)
     # 释放窗口
     cv.destroyAllWindows()
-
-if __name__ == "__main__":
-    main()
