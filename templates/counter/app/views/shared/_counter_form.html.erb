@@ -1,0 +1,14 @@
+<%= form_for(@counter) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <h1></h1>
+  <%= f.text_field :studentnumber %>
+  <%= f.text_field :studentname %>
+  <%= f.text_field :projectname %>
+  <%= f.submit "Upload", class: "btn btn-primary" %>
+  <span class="picture">
+    <%= f.file_field :picture %>
+  </span>
+<% end %>
+
+<script type="text/javascript">
+</script>

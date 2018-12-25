@@ -1,0 +1,58 @@
+<li id="<%= counter.id %>">
+ <span >
+ 	<%= counter.content %>
+    <%= image_tag counter.picture.url, id: "imgtarget" if counter.picture? %>
+    <div id="studentnumberin"><%= counter.studentnumber %></div>
+    <div id="studentnamein"><%= counter.studentname %></div>
+    <div id="projectnamein"><%= counter.projectname %></div>
+  </span>
+  <br>
+  <span class="delete">
+    <% if current_user?(counter.user) %>
+      <%= link_to "delete", counter, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+
+</li>
+<body>
+	<script type="text/javascript">
+		console.log($("#imgtarget").attr("src"));
+		console.log($("#studentnumberin").html());
+		console.log($("#studentnamein").html());
+		console.log($("#projectnamein").html());
+		$(document).ready(function(){
+			$("button").click(function(){
+				$.ajax({
+					url: "http://localhost:2300/111",
+					type: "POST",
+					data: {
+						"img":$("#imgtarget").attr("src"),
+						"studentnumber":$("#studentnumberin").html(),
+						"studentname":$("#studentnamein").html(),
+						"projectname":$("#projectnamein").html()
+					},
+					success: function(data){
+						console.log("greenball count is: " + data.greenball);
+						console.log("blueball count is: " + data.blueball);
+					},
+					error: function(){
+						console.log("error");
+					}
+				});
+				// $.post("/try/ajax/demo_test_post.php",{
+				
+				// 	aaa:counter.picture.url
+				// 	console.log("aaa")
+				// },
+				// function(data,status){
+				// 	alert("数据: \n" + data + "\n状态: " + status);
+				// });
+			});
+		});
+	</script>
+
+</body>
+<button>提交</button>
+
+<%= link_to  "提交",ajaxtest_path %>

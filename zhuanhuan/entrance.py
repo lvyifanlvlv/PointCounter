@@ -23,7 +23,8 @@ class Chuancan:
         Chuancan.data.set_PCOUNT(load_dict["PCOUNT"])
         Chuancan.data.set_ISFINISHED(load_dict["ISFINISHED"])
         f1.close()
-        img = cv.imread("images/%s"%Chuancan.data.get_ID())
+        img = cv.imread("%s"%Chuancan.data.get_ID())
+        print('###############################image reading success!!###############')
         return img
 
 
@@ -42,9 +43,9 @@ class Chuancan:
         with open("myjson/return.json", "w") as f:
             json.dump(new_dict, f)
         f.close()
-        dboperation.writeDB(new_dict['ID'],new_dict['TIME'],new_dict['NAME'],new_dict['RGROUP'],
-                            new_dict['RNAME'],new_dict['PCOUNT'],new_dict['ISFINISHED'],
-                            new_dict['B_CNT'],new_dict['G_CNT'])
+        #dboperation.writeDB(new_dict['ID'],new_dict['TIME'],new_dict['NAME'],new_dict['RGROUP'],
+        #                   new_dict['RNAME'],new_dict['PCOUNT'],new_dict['ISFINISHED'],
+        #                    new_dict['B_CNT'],new_dict['G_CNT'])
 
 
 
