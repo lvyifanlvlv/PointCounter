@@ -5,7 +5,7 @@ class CountersController < ApplicationController
   	def create
   		@counter = current_user.counters.build(counter_params)
   		if @counter.save
-  			flash[:success]="Please wait..."
+  			flash.now[:success]="Please wait..."
   			redirect_to root_url
   		else
         @feed_items = []
@@ -15,9 +15,13 @@ class CountersController < ApplicationController
 
   	def destroy
       @counter.destroy
-      flash[:success] = "Counter deleted"
+      flash.now[:success] = "Successfully deleted!"
       redirect_to request.referrer || root_url
   	end
+
+    def reuest
+      #向后端发送计数请求
+    end
 
   	private
 
