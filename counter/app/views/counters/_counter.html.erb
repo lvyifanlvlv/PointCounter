@@ -1,7 +1,7 @@
 <li id="<%= counter.id %>">
  <span >
  	<%= counter.content %>
-    <%= image_tag counter.picture.url if counter.picture? %>
+    <%= image_tag counter.picture.url, id: "imgtarget" if counter.picture? %>
   </span>
   <br>
   <span class="delete">
@@ -12,3 +12,34 @@
   </span>
 
 </li>
+<body>
+	<script type="text/javascript">
+		console.log($("#imgtarget").attr("src"));
+		$(document).ready(function(){
+	$("button").click(function(){
+		$.ajax({
+			url: "/111",
+			method: "POST",
+			data: {
+				"img":$("#imgtarget").attr("src")
+			},
+			success: function(){
+
+			},
+			error: function(){
+
+			}
+		});
+		// $.post("/try/ajax/demo_test_post.php",{
+		
+		// 	aaa:counter.picture.url
+		// 	console.log("aaa")
+		// },
+		// function(data,status){
+		// 	alert("数据: \n" + data + "\n状态: " + status);
+		// });
+	});
+});
+	</script>
+</body>
+<button >提交</button>
