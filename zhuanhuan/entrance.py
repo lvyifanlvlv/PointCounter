@@ -13,7 +13,7 @@ class Chuancan:
         读整个json，写到data里
         根据json中的图片id。读图，返回
         """
-        f1=open("../myjson/receive.json", 'r')
+        f1=open("myjson/receive.json", 'r')
         load_dict = json.load(f1)
         Chuancan.data.set_ID(load_dict["ID"])
         Chuancan.data.set_TIME(load_dict["TIME"])
@@ -22,8 +22,8 @@ class Chuancan:
         Chuancan.data.set_RNAME(load_dict["RNAME"])
         Chuancan.data.set_PCOUNT(load_dict["PCOUNT"])
         Chuancan.data.set_ISFINISHED(load_dict["ISFINISHED"])
-
-        img = cv.imread("../images/%s"%Chuancan.data.get_ID())
+        f1.close()
+        img = cv.imread("images/%s"%Chuancan.data.get_ID())
         return img
 
 
@@ -39,8 +39,9 @@ class Chuancan:
         new_dict['B_CNT'] = Blue
         new_dict['G_CNT'] = Green
         print(new_dict)
-        with open("../myjson/return.json", "w") as f:
+        with open("myjson/return.json", "w") as f:
             json.dump(new_dict, f)
+        f.close()
         dboperation.writeDB(new_dict['ID'],new_dict['TIME'],new_dict['NAME'],new_dict['RGROUP'],
                             new_dict['RNAME'],new_dict['PCOUNT'],new_dict['ISFINISHED'],
                             new_dict['B_CNT'],new_dict['G_CNT'])
