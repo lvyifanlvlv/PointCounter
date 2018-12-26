@@ -27846,3 +27846,1989 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-26 12:57:50 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_rails_default.html.erb (267.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 282ms (Views: 274.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:13:05 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_rails_default.html.erb (27.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-26 13:13:10 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1L+smuYxYQ4LZTz9uO7HynBmx/yNvorntMU8M34gED7hjsDXfc+xnDhpQrgtmyl/aqy2cJnvuCsdG/XU5ztxXQ==", "session"=>{"email"=>"alice@email.com", "password"=>"[FILTERED]"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 87ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:13:10 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_rails_default.html.erb (228.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 248ms (Views: 237.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:13:12 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (3.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.5ms)
+  Rendered shared/_feed.html.erb (5.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_rails_default.html.erb (23.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 40.8ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/counters/61" for 127.0.0.1 at 2018-12-26 13:13:14 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Lbmh9VDoBURc+2fhA0DUWFqZBM8Unbgv8ZywsF0Mx0tpHDR+VUTL7VRvpbdFIDX1HipP0ETwRmHhQTaiGfqBMw==", "id"=>"61"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 61]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 85ms (ActiveRecord: 75.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:13:15 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.8ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_rails_default.html.erb (26.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:13:26 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MGx02WAS8Q9WTlM+ZYUbySXyORryScDGG6V2A8yXTR90yeFSZb4/pl7akWgj5fpkYUFyBaIkPogLePARiGELZw==", "counter"=>{"studentnumber"=>"1", "studentname"=>"啊", "projectname"=>"这种", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f48dc259758 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-31548-17xqcp1.tif>, @original_filename="datu.tif", @content_type="image/tiff", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"datu.tif\"\r\nContent-Type: image/tiff\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.2ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:13:26.745914"], ["updated_at", "2018-12-26 05:13:26.745914"], ["picture", "datu.tif"], ["studentnumber", "1"], ["studentname", "啊"], ["projectname", "这种"]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:13:26 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (1.8ms)
+  Rendered shared/_feed.html.erb (3.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_rails_default.html.erb (21.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/counters/62" for 127.0.0.1 at 2018-12-26 13:14:33 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fr1d1b13qqZ3A0EELULwpthzKwqQ2iv4m69RK2nnqyw6GMheuNtkD3+Xg1JrIhELnMBgFcC31baLctc5LRHtVA==", "id"=>"62"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.5ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 62]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 11ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:14:33 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_rails_default.html.erb (23.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:14:41 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7wcvLwfxflFyhrygSWZ9RqfhLrBY7Oc/rOPQ2VscPLmrorqkAl2w+HoSfvYPBpzr41JlrwiBGXG8PlbLH+p6wQ==", "counter"=>{"studentnumber"=>"11", "studentname"=>"333", "projectname"=>"33333", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f48e43dcb68 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-31548-dyuyow.png>, @original_filename="123.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"123.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.6ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:14:41.233588"], ["updated_at", "2018-12-26 05:14:41.233588"], ["picture", "123.png"], ["studentnumber", "11"], ["studentname", "333"], ["projectname", "33333"]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:14:41 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (1.8ms)
+  Rendered shared/_feed.html.erb (3.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_rails_default.html.erb (22.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:23:15 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_rails_default.html.erb (253.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 269ms (Views: 261.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:23:18 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_rails_default.html.erb (25.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-26 13:23:22 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QAVLrGFTSFvutjta2vbm/5YNyzCoV2aavVtNXlHhF3JAgKyCFL9O0EAWvr2fAncroTHopCk61aE7gTLRvYcIRw==", "session"=>{"email"=>"alice@email.com", "password"=>"[FILTERED]"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 85ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:23:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_rails_default.html.erb (21.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:23:24 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (2.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (3.0ms)
+  Rendered shared/_feed.html.erb (5.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_rails_default.html.erb (25.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 42.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/counters/63" for 127.0.0.1 at 2018-12-26 13:23:33 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8NztMnhMozB86QtdMqrLK+H62skhuDEbv2kOtriSe0V8a5GDCOX6IA/kmTXLfm14SSCSAzVZn8CNaJd34N1hvQ==", "id"=>"63"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.9ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 63]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:23:33 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (0.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_rails_default.html.erb (23.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:23:43 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pvMoJe/n2RPHhqojy1JqENf/+aROOEiutcLExYE6ID8qRFSUn06AA7SLOEsyhsxDfyWxblrZ5nWHw10E2XU6xw==", "counter"=>{"studentnumber"=>"11", "studentname"=>"2", "projectname"=>"33333", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d844c2fd8 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-fg5jeb.tif>, @original_filename="datu.tif", @content_type="image/tiff", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"datu.tif\"\r\nContent-Type: image/tiff\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.3ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:23:43.618215"], ["updated_at", "2018-12-26 05:23:43.618215"], ["picture", "datu.tif"], ["studentnumber", "11"], ["studentname", "2"], ["projectname", "33333"]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:23:43 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.0ms)
+  Rendered shared/_feed.html.erb (4.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_rails_default.html.erb (23.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/64" for 127.0.0.1 at 2018-12-26 13:27:14 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2TWVxDsLN5xgaEQX8Hv/mynz6uwKK2KTAQQxBpC9WwFVgul1S6JujBNl1n8Jr1nIgSmiJh7KzEgzBajHyPJB+Q==", "id"=>"64"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.3ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 64]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 50ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:27:14 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.9ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (3.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_rails_default.html.erb (240.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 257ms (Views: 254.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:27:22 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cqe02mc59TxUMl47NHXMU8Eb0ZU1EB6mIQ3Y2pig0UyGEMhrF5CsLCc/zFPNoWoAacGZXyHxsH0TDEEbwO/LtA==", "counter"=>{"studentnumber"=>"11", "studentname"=>"333", "projectname"=>"3", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d8c0538a0 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2483-mkxjgt.jpg>, @original_filename="001_07.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_07.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.7ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:27:22.471269"], ["updated_at", "2018-12-26 05:27:22.471269"], ["picture", "001_07.jpg"], ["studentnumber", "11"], ["studentname", "333"], ["projectname", "3"]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:27:22 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.8ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (3.0ms)
+  Rendered shared/_feed.html.erb (5.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_rails_default.html.erb (25.6ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/counters/65" for 127.0.0.1 at 2018-12-26 13:28:04 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fe4q5anu7vFi9w+RqPfDNjFrBFKoSqvP/80U/gG0o3bxWVZU2Ue34RH6nflRI2VlmbFMmLyrBRTNzI0/Wfu5jg==", "id"=>"65"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 65]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 9ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:28:04 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_rails_default.html.erb (25.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:28:17 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oZQda9mlBluuliJNu24NtWDDslM16GBEPlglnMbQmYEtI2HaqQxfS92bsCVCuqvmyBn6mSEJzp8MWbxdnp+DeQ==", "counter"=>{"studentnumber"=>"22", "studentname"=>"333", "projectname"=>"3", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d784ca7f8 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-12vwlks.jpg>, @original_filename="001_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.8ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:28:17.804460"], ["updated_at", "2018-12-26 05:28:17.804460"], ["picture", "001_01.jpg"], ["studentnumber", "22"], ["studentname", "333"], ["projectname", "3"]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:28:17 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.8ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.2ms)
+  Rendered shared/_feed.html.erb (4.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_rails_default.html.erb (24.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/66" for 127.0.0.1 at 2018-12-26 13:28:20 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PhQtms0uJez8/m2+0Gxe30J+UZqnPa67MB6XhjfIjKSyo1ErvYd8/I/z/9YpuPiM6qQZULPcAGACHw5Hb4eWXA==", "id"=>"66"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 66]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (54.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 62ms (ActiveRecord: 55.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:28:20 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_counter_form.html.erb (3.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_rails_default.html.erb (26.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 45.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:28:39 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"epbvpzF71e/as9el/RVV18p6GVT6WOz7DrBC802Mbcb2IZMWQdKM/6m+Rc0EwfOEYqBRnu65QiA8sdsyFcN3Pg==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d58047d40 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-174dn91.jpg>, @original_filename="001_07.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_07.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.6ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:28:39.458241"], ["updated_at", "2018-12-26 05:28:39.458241"], ["picture", "001_07.jpg"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:28:39 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (1.9ms)
+  Rendered shared/_feed.html.erb (3.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_rails_default.html.erb (25.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/67" for 127.0.0.1 at 2018-12-26 13:28:48 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yemOMi882k5rWchZX6RaIaiYB88sPy1pVQLfcaivPoVFXvKDX5WDXhhUWjGmcPxyAEJPBTjeg7JnA0aw8OAkfQ==", "id"=>"67"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.6ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 67]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (55.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 63ms (ActiveRecord: 56.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:28:48 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered shared/_counter_form.html.erb (2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_rails_default.html.erb (31.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:28:55 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d73LQ5/gtduuZn4881HgKgPFqLEI3b/0jM2npMU2p8/7Crfy70nsy91r7FQKhUZ5qx/gexw8ES++zD5lnXm9Nw==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d80315860 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-109q0hn.jpg>, @original_filename="001_07.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_07.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.3ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:28:55.737530"], ["updated_at", "2018-12-26 05:28:55.737530"], ["picture", "001_07.jpg"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:28:55 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (2.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.1ms)
+  Rendered shared/_feed.html.erb (4.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_rails_default.html.erb (25.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/counters/68" for 127.0.0.1 at 2018-12-26 13:29:30 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7LAgksEMGZuPxHgp5kvdCbPV/nRsrG8wHvYVMVbF6epgB1wjsaVAi/zJ6kEfn3taGw+2vnhNwess94zwDorzEg==", "id"=>"68"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 68]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:29:30 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_rails_default.html.erb (25.6ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:29:40 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_rails_default.html.erb (24.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:30:21 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o8ShXln/guYpCtxXuL6dKZJMRo1T4dWAZ1Pelix3YyEvc93vKVbb9loHTj9Bajt6OpYOR0cAe1tVUkdXdDh52Q==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d91ccaed0 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-zptdup.png>, @original_filename="123.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"123.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.2ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:30:21.436074"], ["updated_at", "2018-12-26 05:30:21.436074"], ["picture", "123.png"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 13ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:30:21 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.8ms)
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered shared/_counter_form.html.erb (3.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.3ms)
+  Rendered shared/_feed.html.erb (5.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_rails_default.html.erb (25.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/counters/69" for 127.0.0.1 at 2018-12-26 13:30:29 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/ZFRJ5vT1PHaHy1jHfsxj9do/fiY9RdFWUPhNQqXo05xJi2W63qN4akSvwvkL5fcf7K1MowUuZ5rQnj0Uti5tg==", "id"=>"69"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 69]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (55.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 63ms (ActiveRecord: 55.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:30:29 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.7ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_counter_form.html.erb (4.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_rails_default.html.erb (34.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 55.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:30:34 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1x1ilJOxPO8200YjZ0nOsw28GGxEtaIAFyPLHciE7rj6wk7Iued48/W33B0SYFpZOy4q6XzeFMyXRbtL20JQg==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d848090e8 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-1uh2g2u.jpg>, @original_filename="001_07.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_07.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.3ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:30:34.634528"], ["updated_at", "2018-12-26 05:30:34.634528"], ["picture", "001_07.jpg"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:30:34 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.0ms)
+  Rendered shared/_feed.html.erb (4.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_rails_default.html.erb (24.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/70" for 127.0.0.1 at 2018-12-26 13:30:42 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5C+DHj9VeZtsfHQnQm3eC78P2bvDwI88Ce8U/Q4MYkFomP+vT/wgix9x5k+7uXhYF9WRcdchIec77o08VkN4uQ==", "id"=>"70"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.6ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 70]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (54.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 63ms (ActiveRecord: 55.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:30:42 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered shared/_counter_form.html.erb (2.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_rails_default.html.erb (26.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:30:49 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KfVHuSlBXEFok7e4yjmCBmHEax9oWDv2bwGAaRiBhgSlQjsIWegFURueJdAz7SRVyR4j1Xy5lS1dABmoQM6c/A==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d784c1bf8 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-9y7kum.png>, @original_filename="thresholdtest.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"thresholdtest.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.2ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:30:49.371043"], ["updated_at", "2018-12-26 05:30:49.371043"], ["picture", "thresholdtest.png"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:30:49 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.2ms)
+  Rendered shared/_feed.html.erb (4.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_rails_default.html.erb (25.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/71" for 127.0.0.1 at 2018-12-26 13:30:58 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PKeUCnT7JI1agVzHJpROrHzW+ZzN+XJzWk4vPKm4NxCwEOi7BFJ9nSmMzq/fQOj/1AyxVtkY3KhoT7b98fct6A==", "id"=>"71"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.7ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 71]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (54.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 63ms (ActiveRecord: 56.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:30:59 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.9ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered shared/_counter_form.html.erb (2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_rails_default.html.erb (25.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:31:10 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eWKX+YijXlTGz5hTNHHEda9xEyCRrPpqgkG8LA9CFxlUvbulovUaSAWrAm1BWFCfmeMhpanHTKYCJ8x6HISpA==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d917bba20 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-orytfh.jpg>, @original_filename="001_04.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_04.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.2ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:31:10.308455"], ["updated_at", "2018-12-26 05:31:10.308455"], ["picture", "001_04.jpg"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:31:10 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.1ms)
+  Rendered shared/_feed.html.erb (4.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_rails_default.html.erb (26.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/72" for 127.0.0.1 at 2018-12-26 13:31:31 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MwQYPUQ2xx8Cu6dj0ffce2hP8suDQVWG0DSIV4uq/X6/s2SMNJ+eD3G2NQsoI3oowJW6AZeg+13iNRGW0+Xnhg==", "id"=>"72"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 72], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 72]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (47.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 56ms (ActiveRecord: 47.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:31:31 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_counter_form.html.erb (3.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_rails_default.html.erb (32.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 51.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:31:54 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WN5jveeV33K1QT2jVcs7fH6juj0pdDzoD+GS/0y8Fa/UaR8MlzyGYsZMr8usH50v1nny9z2VkjM94As+FPMPVw==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d7cc76f70 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2483-19ldy44.jpg>, @original_filename="001_06.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_06.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.3ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:31:54.839214"], ["updated_at", "2018-12-26 05:31:54.839214"], ["picture", "001_06.jpg"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:31:54 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (1.9ms)
+  Rendered shared/_feed.html.erb (3.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_rails_default.html.erb (23.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/73" for 127.0.0.1 at 2018-12-26 13:32:33 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PlMksNxObKlV20Ml3nuNpM08BRbu7tsRMwQYFGDZXqmy5FgBrOc1uSbW0U0nryv3ZeZN3PoPdcoBBYHVOJZEUQ==", "id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 73]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 9ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:32:33 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_rails_default.html.erb (24.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:32:39 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.3ms)
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered shared/_counter_form.html.erb (4.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_rails_default.html.erb (25.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 46.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-12-26 13:32:42 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s/H8w1QJoO+oTVpIU/xk0gcAL/x1ihonFeVWNS3CyyM/RoByJKD5/9tAyCCqKMKBr9pnNmFrtPwn5M/0dY3R2w=="}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:32:42 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_rails_default.html.erb (25.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:33:17 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.1ms)
+  Rendered users/_form.html.erb (8.0ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_rails_default.html.erb (29.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:34:34 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/_form.html.erb (7.3ms)
+  Rendered users/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_rails_default.html.erb (25.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:35:01 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_rails_default.html.erb (33.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:36:48 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (234.1ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `姓名' for #<#<Class:0x00007f9d91367618>:0x00007f9d9147d5e8>):
+     8:     <%= form_for(@user) do |f| %>
+     9:   <%= render 'shared/error_messages', object: f.object %>
+    10: 
+    11:   <%= 姓名 %>
+    12:   <%= f.text_field :name, class: 'form-control' %>
+    13: 
+    14:   <%= 邮件地址 %>
+  
+app/views/users/new.html.erb:11:in `block in _app_views_users_new_html_erb__163232730638038200_70157362001680'
+app/views/users/new.html.erb:8:in `_app_views_users_new_html_erb__163232730638038200_70157362001680'
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:37:50 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/_form.html.erb (2.9ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_rails_default.html.erb (39.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:37:53 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_rails_default.html.erb (38.4ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-26 13:37:57 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5L9K84Q+BCW7hsdym5yIvbp++t2xJBjwLW1LLU02tEzkOq3d8dICrhUmQpXeaBlpjULZSTBJq8urtzSioVCreQ==", "session"=>{"email"=>"alice@email.com", "password"=>"[FILTERED]"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 77ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:37:57 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_rails_default.html.erb (32.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:37:58 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.1ms)
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered shared/_counter_form.html.erb (3.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_rails_default.html.erb (43.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-12-26 13:40:17 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cBmD/0hK6RV6MLhlxmH4ZS4g1ik73d1jkpFoPhDKirH8rv9OOOOwBQk9Kg0/tV42hvqe4y88c7igkPH/SIWQSQ=="}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:40:17 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_rails_default.html.erb (24.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:40:18 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_rails_default.html.erb (31.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:40:56 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_rails_default.html.erb (26.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:41:06 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_rails_default.html.erb (24.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:42:18 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_rails_default.html.erb (29.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:42:30 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_rails_default.html.erb (33.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-26 13:42:45 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZejkdWbT+CqZ9RCy6s0FhwKZ7b6Dw5J5aWAqAobHFg9lbQNbEz/+oTdVlVWvOZRTNaXOKgKuIULvulWNaqEJOg==", "session"=>{"email"=>"alice@email.com", "password"=>"[FILTERED]"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:42:45 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_rails_default.html.erb (22.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-12-26 13:42:47 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_rails_default.html.erb (25.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-12-26 13:44:14 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/edit.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_rails_default.html.erb (23.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-12-26 13:46:15 +0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:55
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_rails_default.html.erb (26.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:46:21 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.5ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_counter_form.html.erb (3.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_rails_default.html.erb (25.5ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2018-12-26 13:46:24 +0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_rails_default.html.erb (35.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:46:26 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_rails_default.html.erb (28.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-12-26 13:46:32 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"emhITvau2by5N/oA6gRCVW+TYJ149YNUogujszelH8v23zT/hgeArMo6aGgT0OQGx0koV2wULY+QCjpyb+oFMw=="}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:46:32 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_rails_default.html.erb (31.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:46:55 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_rails_default.html.erb (33.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-26 13:47:00 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BzeYsJhezMpdE3mf9AXjCvRqE3A84GxaE32abhIcG9UHsn+e7bLKQfOz/Hix8XLew1Yw5L2N32GVp+Xh/noE4A==", "session"=>{"email"=>"alice@email.com", "password"=>"[FILTERED]"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 73ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:47:00 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_rails_default.html.erb (21.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:47:02 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.4ms)
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered shared/_counter_form.html.erb (2.8ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_rails_default.html.erb (25.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:47:17 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gd3YMDFDAck3VTZj/NCPO+YXjPKZLft4xSI0Bxe7iCCDau8vGKQNphmEZBcPRY0y8wWhh57yw6HeNWz7SKabYw==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d90edd4a8 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-1ilfr0b.png>, @original_filename="123.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"123.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.2ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:47:17.872737"], ["updated_at", "2018-12-26 05:47:17.872737"], ["picture", "123.png"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:47:17 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered shared/_counter_form.html.erb (2.9ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.4ms)
+  Rendered shared/_feed.html.erb (4.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_rails_default.html.erb (31.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/74" for 127.0.0.1 at 2018-12-26 13:47:28 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uA/OcufO0bI6MNpqHs1qvig88XrxHGM2gWLyOBXZtdI0uLLDl2eIokk9SALnGcztgOa5sOX9ze2zY2v5TZavKg==", "id"=>"74"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.2ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 74]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:47:28 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered shared/_counter_form.html.erb (1.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (0.9ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_rails_default.html.erb (25.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:47:39 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VQSqvY5LGvV3zHLBWnFD3LhVxpJ4O9Vwqnyo5XFAU1TZs9YM/uJD5QTB4KmjpeWPEI+OWGzae6uYfTEkKQ9JrA==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d8c322dd8 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-1q9d4uj.png>, @original_filename="thresholdtest.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"thresholdtest.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.6ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:47:39.096050"], ["updated_at", "2018-12-26 05:47:39.096050"], ["picture", "thresholdtest.png"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:47:39 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.5ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.1ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.2ms)
+  Rendered shared/_feed.html.erb (4.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_rails_default.html.erb (24.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/counters/75" for 127.0.0.1 at 2018-12-26 13:47:50 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oqe6hPh1M3y+Myg8egUJomBTZHRAkBLvb3UPgluKR6cuEMY1iNxqbM0+ulSD0a/xyIksvlRxvDRddJZDA8VdXw==", "id"=>"75"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.3ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 75]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:47:50 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered shared/_counter_form.html.erb (2.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_rails_default.html.erb (25.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/counters" for 127.0.0.1 at 2018-12-26 13:47:59 +0800
+Processing by CountersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7t/XahWXK/wL14qhCJTSLsey+rZH2doHySq/S21QgzZiaKvbZT5y7HjaGMnxQHR9b2iyfFM4dNz7KyaKNR+Zzg==", "counter"=>{"studentnumber"=>"", "studentname"=>"", "projectname"=>"", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00007f9d91cc98f0 @tempfile=#<Tempfile:/tmp/RackMultipart20181226-2479-10bppt3.jpg>, @original_filename="001_01.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"counter[picture]\"; filename=\"001_01.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"上传"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[36mCounter Create (0.7ms)[0m  [1m[32mINSERT INTO "counters" ("user_id", "created_at", "updated_at", "picture", "studentnumber", "studentname", "projectname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["created_at", "2018-12-26 05:47:59.776567"], ["updated_at", "2018-12-26 05:47:59.776567"], ["picture", "001_01.jpg"], ["studentnumber", ""], ["studentname", ""], ["projectname", ""]]
+  ↳ app/controllers/counters_controller.rb:10
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:10
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 12ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:47:59 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.8ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.1ms)
+  Rendered shared/_feed.html.erb (4.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_rails_default.html.erb (26.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/counters/76" for 127.0.0.1 at 2018-12-26 13:48:46 +0800
+Processing by CountersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"x6ri3fNhU5ASCAxjdDHx8A8fgiYdeebUH5fK8tFsEJVLHZ5sg8gKgGEFnguN5Vejp8XK7AmYSA8tllMziSMKbQ==", "id"=>"76"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE "counters"."user_id" = ? AND "counters"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/counters_controller.rb:36
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[36mCounter Destroy (0.6ms)[0m  [1m[31mDELETE FROM "counters" WHERE "counters"."id" = ?[0m  [["id", 76]]
+  ↳ app/controllers/counters_controller.rb:20
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/counters_controller.rb:20
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:48:46 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_rails_default.html.erb (25.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-12-26 13:52:48 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fA2znAXlseH6oqLTGbptU6cJWXw5hSJ0nSYksqGTkT/wus8tdUzo8YmvMLvgbssAD9MRti1kjK+vJ71z+dyLxw=="}
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:52:48 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_rails_default.html.erb (23.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:52:53 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_rails_default.html.erb (25.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:52:56 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_rails_default.html.erb (27.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:52:57 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_rails_default.html.erb (32.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:52:57 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_rails_default.html.erb (31.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:53:20 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered users/_form.html.erb (6.2ms)
+  Rendered users/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_rails_default.html.erb (39.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:53:37 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_rails_default.html.erb (38.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/help" for 127.0.0.1 at 2018-12-26 13:53:42 +0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_rails_default.html.erb (33.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:53:43 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_rails_default.html.erb (32.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-12-26 13:53:46 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.8ms)
+  Rendered users/_form.html.erb (3.8ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_rails_default.html.erb (30.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-26 13:53:48 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Af0xnu+zRnHYGzf+oJUXZuvXl8TjA5M8xUYJKZ9KotbhAAuYNre1xjrovk8fDSrac2L/X/jR/WECPI3kv7qEGw==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"立即注册"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_rails_default.html.erb (24.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:53:52 +0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_rails_default.html.erb (29.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-12-26 13:59:09 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_rails_default.html.erb (28.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-12-26 13:59:18 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3Mpk7YJK/A48wpkzxwk6Tb5skH4CkTSuqHMsiGPNixzcT4PD96b6hZJiHNSC/auZiVCz6oP8h5UuqVMHj6uUKQ==", "session"=>{"email"=>"alice@email.com", "password"=>"[FILTERED]"}, "commit"=>"登录"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://0.0.0.0:3000/users/1
+Completed 302 Found in 73ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-12-26 13:59:18 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_rails_default.html.erb (21.6ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-26 13:59:19 +0800
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (1.0ms)
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered shared/_counter_form.html.erb (4.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  Rendered shared/_feed.html.erb (1.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_rails_default.html.erb (24.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
