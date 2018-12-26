@@ -46,7 +46,7 @@ def test_json():
     print(a)
     print(type(a))
     #返回这里不知道是只返回一个串还是分开
-    return str("绿点数量为:"+str(G_num)+"个,"+"蓝点数量为："+str(B_num)+"\r个。")
+    return str("来自课题组\n"+ktz+"\n的学生\n"+name+"\n在项目\n"+pjn+"\n中的计数结果为：\n"+"绿点数量为:"+str(G_num)+"个,"+"蓝点数量为："+str(B_num)+"个。")
 
 app.run(
       host='0.0.0.0',

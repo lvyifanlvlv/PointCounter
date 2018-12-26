@@ -27821,3 +27821,28 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 10.202.14.152 at 2018-12-26 11:39:29 +0800
+Cannot render console from 10.202.14.152! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:9
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered shared/_user_info.html.erb (0.8ms)
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered shared/_counter_form.html.erb (2.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "counters" WHERE (user_id = 1)[0m
+  ↳ app/views/shared/_feed.html.erb:1
+  [1m[36mCounter Load (0.2ms)[0m  [1m[34mSELECT  "counters".* FROM "counters" WHERE (user_id = 1) LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/shared/_feed.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/counters/_counter.html.erb:11
+  Rendered collection of counters/_counter.html.erb [1 times] (2.4ms)
+  Rendered shared/_feed.html.erb (4.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_rails_default.html.erb (29.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.5ms)
+
+
