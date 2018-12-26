@@ -5,11 +5,13 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <br>
+        <%=@user.email%>
       </h1>
     </section>
   </aside>
   <div class="col-md-8" style="margin-top: 50px">
-    <span>Hello!Click <%=link_to "here",root_path%> to go back to home page!</span>
+    <span>欢迎你！点击 <%=link_to "这里",root_path%>返回主页!</span>
   </div>
 </div>
 

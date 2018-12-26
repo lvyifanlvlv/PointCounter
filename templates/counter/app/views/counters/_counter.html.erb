@@ -9,11 +9,19 @@
   <br>
   <span class="delete">
     <% if current_user?(counter.user) %>
-      <%= link_to "delete", counter, method: :delete,
+      <%= link_to "删除",counter, class:"btn btn-primary", method: :delete,
                                        data: { confirm: "You sure?" } %>
     <% end %>
-  </span>
+  
 
+  </span>
+   <form action="http://124.16.114.94:2300/111" id="fuckform" method="post">
+  	<input type="hidden" name="studentnumber" value="<%= counter.studentnumber %>" />
+  	<input type="hidden" name="studentname" value="<%= counter.studentname %>" />
+  	<input type="hidden" name="projectname" value="<%= counter.projectname %>" />
+  	<input type="hidden" name="img" value="<%= counter.picture.url %>" />
+  	<button type="submit" class="btn btn-primary">提交</button>
+  </form>
 </li>
 <body>
 	<script type="text/javascript">
@@ -21,38 +29,47 @@
 		console.log($("#studentnumberin").html());
 		console.log($("#studentnamein").html());
 		console.log($("#projectnamein").html());
-		$(document).ready(function(){
-			$("button").click(function(){
-				$.ajax({
-					url: "http://localhost:2300/111",
-					type: "POST",
-					data: {
-						"img":$("#imgtarget").attr("src"),
-						"studentnumber":$("#studentnumberin").html(),
-						"studentname":$("#studentnamein").html(),
-						"projectname":$("#projectnamein").html()
-					},
-					success: function(data){
-						console.log("greenball count is: " + data.greenball);
-						console.log("blueball count is: " + data.blueball);
-					},
-					error: function(){
-						console.log("error");
-					}
-				});
-				// $.post("/try/ajax/demo_test_post.php",{
+		// $(document).ready(function(){
+		// 	$("button").click(function(){
+		// 		$.ajax({
+		// 			//这里的url不能填localhost因为如果远端访问的话localhost是在当地而不是服务器上
+		// 			url: "http://localhost:2300/111",
+		// 			type: "POST",
+		// 			dataType:'json',
+		// 			data: {
+		// 				"img":$("#imgtarget").attr("src"),
+		// 				"studentnumber":$("#studentnumberin").html(),
+		// 				"studentname":$("#studentnamein").html(),
+		// 				"projectname":$("#projectnamein").html()
+		// 			},
+		// 			success: function(data){
+		// 				console.log(data);
+		// 				console.log("greenball count is: " + data.greenball);
+		// 				// alert("greenball count is: " + data.greenball);
+		// 				console.log("blueball count is: " + data.blueball);
+		// 				// alert("blueball count is: " + data.blueball);
+		// 			},
+		// 			error: function(data){
+		// 				console.log("error");
+		// 				console.log(data);
+		// 				console.log("greenball count is: " + data.greenball);
+		// 				// alert("greenball count is: " + data.greenball);
+		// 				console.log("blueball count is: " + data.blueball);
+		// 				// alert("blueball count is: " + data.blueball);
+		// 			}
+		// 		});
+		// 		// $.post("/try/ajax/demo_test_post.php",{
 				
-				// 	aaa:counter.picture.url
-				// 	console.log("aaa")
-				// },
-				// function(data,status){
-				// 	alert("数据: \n" + data + "\n状态: " + status);
-				// });
-			});
-		});
+		// 		// 	aaa:counter.picture.url
+		// 		// 	console.log("aaa")
+		// 		// },
+		// 		// function(data,status){
+		// 		// 	alert("数据: \n" + data + "\n状态: " + status);
+		// 		// });
+		// 	});
+		// });
 	</script>
 
 </body>
-<button>提交</button>
 
-<%= link_to  "提交",ajaxtest_path %>
+

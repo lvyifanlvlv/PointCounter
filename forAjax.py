@@ -7,21 +7,20 @@ import os
 app = Flask(__name__)
 
 
-@app.route("/")
-def html():
-    return render_template('/counter/app/views/counters/ajaxtest.html')
-
 @app.route('/111',methods=['POST','GET'])
 def test_json():
     #获取JSON数据
-    img=request.form.get('img')
+    
+    img=request.form['img']
+    
     img1="templates/counter/public"+img[0:28]
     for filename in os.listdir(r"%s"%img1):              #listdir的参数是文件夹的路径
     	img1=img1+filename
     print(img1)
-    ktz=request.form.get('studentnumber')
-    name=request.form.get('studentname')
-    pjn=request.form.get('projectname')
+    
+    ktz=request.form['studentnumber']
+    name=request.form['studentname']
+    pjn=request.form['projectname']
     new_dict = {}
     new_dict['ID'] = img1
     new_dict['TIME'] = time.time()
@@ -40,9 +39,14 @@ def test_json():
     load_dict=json.load(f1)
     G_num=load_dict['B_CNT']
     B_num=load_dict['G_CNT']
-    #返回
-    return jsonify({'green':G_num,'blue':B_num})
+    print(G_num)
+    print(B_num)
+    a=jsonify({'greenball':G_num})
 
+    print(a)
+    print(type(a))
+    #返回这里不知道是只返回一个串还是分开
+    return str("绿点数量为:"+str(G_num)+"个,"+"蓝点数量为："+str(B_num)+"\r个。")
 
 app.run(
       host='0.0.0.0',

@@ -1,10 +1,12 @@
 <%= form_for(@counter) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <h1></h1>
+  <h1>课题组名称：</h1>
   <%= f.text_field :studentnumber %>
+  <h1>姓名：</h1>
   <%= f.text_field :studentname %>
+  <h1>项目名称</h1>
   <%= f.text_field :projectname %>
-  <%= f.submit "Upload", class: "btn btn-primary" %>
+  <%= f.submit "上传", class: "btn btn-primary" %>
   <span class="picture">
     <%= f.file_field :picture %>
   </span>

@@ -10,22 +10,21 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>Uploaded pictues</h3>
+      <h3>已上传图片</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
 
 <div class="center jumbotron">
-  <h1>Welcome to the Point Counter</h1>
+  <h1>欢迎来到荧光颗粒计数平台</h1>
 
   <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Point Counter</a>
-    application.
+    这是
+    <a href="http://www.railstutorial.org/">荧光颗粒计数平台</a>的主页。
   </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to "立即注册!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 <div class="col-md-8" style="margin-left: 475px"> <%= link_to image_tag("logo.png", alt: "Rails logo"),
             'https://github.com/lvyifanlvlv/PointCounter/' %></div>
